@@ -309,7 +309,26 @@
                     <div class="agent-placeholder-content">
                         <h4>Deploy Your Agentforce Agent Here</h4>
                         <p>Replace this placeholder with your Salesforce Agentforce embedded service deployment snippet.</p>
-                        <code>&lt;!-- Insert your Agentforce<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;embedded service code here --&gt;</code>
+                            <script type='text/javascript'>
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+
+			embeddedservice_bootstrap.init(
+				'00DgL00000GSnEL',
+				'git_pages_ms',
+				'https://orgfarm-4344032a37-dev-ed.develop.my.site.com/ESWgitpagesms1766518564680',
+				{
+					scrt2URL: 'https://orgfarm-4344032a37-dev-ed.develop.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
+</script>
+<script type='text/javascript' src='https://orgfarm-4344032a37-dev-ed.develop.my.site.com/ESWgitpagesms1766518564680/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+
                     </div>
                 </div>
             </div>
@@ -320,4 +339,5 @@
         <p>© 2024 Coexya - A Talan Company | Transforming Organizations Through Innovation</p>
     </footer>
 </body>
+
 </html>
